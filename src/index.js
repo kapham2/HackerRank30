@@ -1,5 +1,42 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+    // Day 1: Data Types
+    function main () {
+        let i = 4
+        let d = 4.0
+        let s = "HackerRank "
+
+        // Declare second integer, double, and String variables.
+        let i2
+        let d2
+        let s2
+
+        // Read and save an integer, double, and String to your variables.
+        i2 = 12
+        d2 = 4.0
+        s2 = "is the best place to learn and practice coding!"
+
+        // Print the sum of both integer variables on a new line.
+        console.log(i + i2)
+
+        // Print the sum of the double variables on a new line.
+        console.log((d + d2).toFixed(1))
+
+        // Concatenate and print the String variables on a new line
+        // The 's' variable above should be printed first.
+        console.log(s + s2)
+        return "Day 1: Data Types"
+    }
+
+    div1 = document.querySelector('div[id="1"]');
+    div1.innerHTML = main()
+    console.log(div1.innerHTML)
+    // => 16
+    // => 8.0
+    // => HackerRank is the best place to learn and practice coding!
+    printLine()
+
+
     // Day 0: Hello, World.
     function processData(inputString) {
         console.log("Hello, World.")
@@ -10,7 +47,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const sampleInput = "Welcome to 30 Days of Code!"
     div0 = document.querySelector('div[id="0"]');
     div0.innerHTML = processData(sampleInput)
+    console.log(div0.innerHTML)
     // => Hello, World. 
     // => Welcome to 30 Days of Code!
+    printLine()
+
+
+    function printLine() {
+        console.log("====================")
+    }
 
 })
