@@ -12,6 +12,9 @@ document.addEventListener('DOMContentLoaded', () => {
         let s2
 
         // Read and save an integer, double, and String to your variables.
+        // i2 = parseInt(readLine())
+        // d2 = parseFloat(readLine())
+        // s2 = readLine()
         i2 = 12
         d2 = 4.0
         s2 = "is the best place to learn and practice coding!"
