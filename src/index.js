@@ -1,5 +1,22 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+    // Day 2: Operators
+    function solve(meal_cost, tip_percent, tax_percent) {
+        let tip = meal_cost * tip_percent / 100
+        let tax = meal_cost * tax_percent / 100
+        let total = meal_cost + tip + tax
+        console.log(Math.round(total))
+        return "Day 2: Operators"
+    
+    }
+
+    div2 = document.querySelector('div[id="2"]');
+    div2.innerHTML = solve(12.00, 20, 8)
+    console.log(div2.innerHTML)
+    // => 15
+    printLine()
+    
+
     // Day 1: Data Types
     function main () {
         let i = 4
