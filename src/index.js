@@ -1,5 +1,24 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+    // Day 3: Intro to Conditional Statements
+    function main3() {
+        const N = 3
+        const isOdd = N % 2 === 1
+        if (isOdd || (!isOdd && N >= 6 && N <= 20)) {
+            console.log("Weird")
+        } else {
+            console.log("Not Weird")
+        }
+        return "Day 3: Intro to Conditional Statements"
+    
+    }
+
+    div3 = document.querySelector('div[id="3"]');
+    div3.innerHTML = main3()
+    console.log(div3.innerHTML)
+    // => Weird
+    printLine()
+
     // Day 2: Operators
     function solve(meal_cost, tip_percent, tax_percent) {
         let tip = meal_cost * tip_percent / 100
