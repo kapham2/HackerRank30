@@ -1,5 +1,33 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+    // Day 5: Loops
+
+    function main5() {
+        const n = 2;
+    
+        for (let i = 1; i <= 10; i++) {
+            console.log(`${n} x ${i} = ${i * n}`)
+        }
+
+        return "Day 5: Loops"
+    }
+
+    div5 = document.querySelector('div[id="5"]');
+    div5.innerHTML = main5()
+    console.log(div5.innerHTML)
+    // 2 x 1 = 2
+    // 2 x 2 = 4
+    // 2 x 3 = 6
+    // 2 x 4 = 8
+    // 2 x 5 = 10
+    // 2 x 6 = 12
+    // 2 x 7 = 14
+    // 2 x 8 = 16
+    // 2 x 9 = 18
+    // 2 x 10 = 20
+    printLine()
+
+
     // Day 4: Class vs. Instance
     function Person(initialAge) {
         let age;
