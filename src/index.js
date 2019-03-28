@@ -1,5 +1,41 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+    // Day 6: Let's Review
+
+    function processData6(input) {
+        const inputArray = input.split("\n")
+        const testCases = inputArray[0]
+        let testCase = 1;
+
+        while (testCase <= testCases) {
+            let string = inputArray[testCase]
+            let evenIndices = ""
+            let oddIndices = ""
+
+            for (let i = 0; i < string.length; i++) {
+                if (i % 2 == 0) {
+                    evenIndices += string[i]
+                }
+                else {
+                    oddIndices += string[i]
+                }
+            }
+
+            console.log(evenIndices + " " + oddIndices)
+            testCase++
+        }
+
+        return "Day 6: Let's Review"
+    }
+
+    div6 = document.querySelector('div[id="6"]');
+    div6.innerHTML = processData6("2\nHacker\nRank")
+    console.log(div6.innerHTML)
+    // Hce akr
+    // Rn ak
+    printLine()
+
+
     // Day 5: Loops
 
     function main5() {
@@ -71,6 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log(div4.innerHTML)
     printLine()
 
+
     // Day 3: Intro to Conditional Statements
     function main3() {
         const N = 3
@@ -89,6 +126,7 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log(div3.innerHTML)
     // => Weird
     printLine()
+
 
     // Day 2: Operators
     function solve(meal_cost, tip_percent, tax_percent) {
