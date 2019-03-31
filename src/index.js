@@ -1,5 +1,29 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+    // Day 7: Arrays
+
+    function main7() {
+        const arr = "1 4 3 2".split(' ').map(arrTemp => parseInt(arrTemp, 10));
+
+        const reverseArr = []
+
+        for (let i = arr.length - 1; i >= 0; i--) {
+            reverseArr.push(arr[i])
+        }
+
+        const reverseStr = reverseArr.join(" ")
+
+        console.log(reverseStr)
+
+        return "Day 7: Arrays"
+    }
+
+    div7 = document.querySelector('div[id="7"]');
+    div7.innerHTML = main7()
+    console.log(div7.innerHTML)
+    // 2 3 4 1
+    printLine()
+
     // Day 6: Let's Review
 
     function processData6(input) {
