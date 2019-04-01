@@ -1,5 +1,24 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+    // Day 9: Recursion
+
+    function factorial(n) {
+        if (n === 1) {
+            return 1
+        }
+        else {
+            return n * factorial(n - 1)
+        }
+    } 
+
+    div9 = document.querySelector('div[id="9"]');
+    div9.innerHTML = "Day 9: Recursion"
+    console.log(factorial(3))
+    console.log("Day 9: Recursion")
+    // 6
+    printLine()
+
+
     // Day 8: Dictionaries and Maps
 
     function processData8(input) {
