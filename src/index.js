@@ -1,5 +1,39 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+    // Day 8: Dictionaries and Maps
+
+    function processData8(input) {
+        const inputArray = input.split("\n")
+        const numEntries = inputArray[0]
+        const phoneBook = {}
+    
+        for (let i = 1; i <= numEntries; i++) {
+            const entry = inputArray[i].split(" ")
+            phoneBook[entry[0]] = entry[1]
+        }
+    
+        for (let j = parseInt(numEntries) + 1; j < inputArray.length; j++) {
+            const name = inputArray[j]
+            if (phoneBook[name]) {
+                console.log(`${name}=${phoneBook[name]}`)
+            }
+            else {
+                console.log("Not found")
+            }
+        }
+
+        return "Day 8: Dictionaries and Maps"
+    } 
+
+    div8 = document.querySelector('div[id="8"]');
+    div8.innerHTML = processData8("3\nsam 99912222\ntom 11122222\nharry 12299933\nsam\nedward\nharry")
+    console.log(div8.innerHTML)
+    // sam=99912222
+    // Not found
+    // harry=12299933
+    printLine()
+
+
     // Day 7: Arrays
 
     function main7() {
