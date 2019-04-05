@@ -1,5 +1,37 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+    // Day 10: Binary Numbers
+
+    function main10(n) {
+        let binary = ""
+        let num = n
+    
+        while (num > 0) {
+            binary = num % 2 + binary
+            num = parseInt(num / 2)
+        }
+    
+        const onesArray = binary.split("0")
+    
+        let count = 0
+        for (let i = 0; i < onesArray.length; i++) {
+            const length = onesArray[i].length
+            if (length > count) {
+                count = length
+            }
+        }
+    
+        console.log(count)
+
+        return "Day 10: Binary Numbers"
+    }
+
+    div10 = document.querySelector('div[id="10"]');
+    div10.innerHTML = main10(13)
+    console.log(div10.innerHTML)
+    // 2
+    printLine()
+    
     // Day 9: Recursion
 
     function factorial(n) {
