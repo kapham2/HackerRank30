@@ -1,5 +1,46 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+    // Day 11: 2D Arrays
+
+    function main11() {
+        let arr = [ 
+            [ 1, 1, 1, 0, 0, 0 ],
+            [ 0, 1, 0, 0, 0, 0 ],
+            [ 1, 1, 1, 0, 0, 0 ],
+            [ 0, 0, 2, 4, 4, 0 ],
+            [ 0, 0, 0, 2, 0, 0 ],
+            [ 0, 0, 1, 2, 4, 0 ] 
+        ]
+    
+        // console.log(arr)
+        const rows = arr.length
+        const cols = arr[0].length
+        let largestSum = -9 * 7
+        let sum
+    
+        for (let j = 0; j < rows - 2; j++) {
+            for (let k = 0; k < cols - 2; k++) {
+                sum = arr[j][k] + arr[j][k + 1] + arr[j][k + 2]
+                sum += arr[j + 1][k + 1]
+                sum += arr[j + 2][k] + arr[j + 2][k + 1] + arr[j + 2][k + 2]
+                if (sum > largestSum) {
+                    largestSum = sum
+                }
+            }
+        }
+    
+        console.log(largestSum)
+
+        return "Day 11: 2D Arrays"
+    }
+
+    div11 = document.querySelector('div[id="11"]');
+    div11.innerHTML = main11(13)
+    console.log(div11.innerHTML)
+    // 19
+    printLine()
+
+
     // Day 10: Binary Numbers
 
     function main10(n) {
