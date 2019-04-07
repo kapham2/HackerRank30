@@ -1,5 +1,78 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+    // Day 12: Inheritance
+
+    class Personn {
+        constructor(firstName, lastName, identification) {
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.idNumber = identification;
+        }
+        
+        printPerson() {
+            console.log(
+                "Name: " + this.lastName + ", " + this.firstName 
+                + "\nID: " + this.idNumber
+            )
+        }
+    }
+
+    class Student extends Personn {
+
+        constructor(firstName, lastName, id, scores) {
+            super(firstName, lastName, id)
+            this.scores = scores
+        }
+
+        calculate() {
+            let sum = 0
+            const length = this.scores.length
+            for (let i = 0; i < length; i++) {
+                sum += this.scores[i]
+            }
+            const average = sum / length
+    
+            if (average < 40) {
+                return "T"
+            } else if (average < 55) {
+                return "D"
+            } else if (average < 70) {
+                return "P"
+            } else if (average < 80) {
+                return "A"
+            } else if (average < 90) {
+                return "E"
+            } else {
+                return "O"
+            }
+        }
+    }
+
+    function main12() {
+        let firstName = "Heraldo"
+        let lastName = "Memelli"
+        let id = 8135627
+        let numScores = 2
+        let testScores = new Array(numScores)
+        testScores = [100, 80]
+    
+        let s = new Student(firstName, lastName, id, testScores)
+        s.printPerson()
+        s.calculate()
+        console.log('Grade: ' + s.calculate())
+
+        return "Day 12: Inheritance"
+    }
+
+    div12 = document.querySelector('div[id="12"]');
+    div12.innerHTML = main12()
+    console.log(div12.innerHTML)
+    // Name: Memelli, Heraldo
+    // ID: 8135627
+    // Grade: O
+    printLine()
+
+
     // Day 11: 2D Arrays
 
     function main11() {
