@@ -1,5 +1,56 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+    // Day 13: Abstract Classes
+
+    class Book {
+        constructor(title, author) {
+            if (this.constructor === Book) {
+                throw new TypeError('Do not attempt to directly instantiate an abstract class.'); 
+            }
+            else {
+                this.title = title;
+                this.author = author;
+            }
+        }
+        
+        display() {
+            console.log('Implement the \'display\' method!')
+        }
+    }
+
+    class MyBook extends Book {
+        constructor(title, author, price) {
+            super(title, author)
+            this.price = price
+        }
+    
+        display() {
+            console.log("Title:", this.title)
+            console.log("Author:", this.author)
+            console.log("Price:", this.price)
+        }
+    }
+
+    function main13() {
+        let title = "The Alchemist"
+        let author = "Paulo Coelho"
+        let price = 248
+
+        let book = new MyBook(title, author, price)
+        book.display()
+
+        return "Day 13: Abstract Classes"
+    }
+
+    div13 = document.querySelector('div[id="13"]');
+    div13.innerHTML = main13()
+    console.log(div13.innerHTML)
+    // Title: The Alchemist
+    // Author: Paulo Coelho
+    // Price: 248
+    printLine()
+
+
     // Day 12: Inheritance
 
     class Personn {
