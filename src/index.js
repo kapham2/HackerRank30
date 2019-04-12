@@ -1,5 +1,47 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+    // Day 14: Scope 
+
+    class Difference {  
+        constructor(integers) {
+            this.elements = integers;
+        }
+  
+        computeDifference() {
+            let max = this.elements[0];
+            let min = this.elements[0];
+            for (let i = 1; i < this.elements.length; i++) {
+                if (max < this.elements[i]) {
+                    max = this.elements[i];
+                }
+    
+                if (min > this.elements[i]) {
+                    min = this.elements[i];
+                }
+            }
+    
+            this.maximumDifference = max - min;
+        }
+    }
+
+    function main14() {
+        const a = [1, 2, 5]
+
+        let difference = new Difference(a);
+
+        difference.computeDifference();
+
+        console.log(difference.maximumDifference);
+        return "Day 14: Scope"
+    }
+
+    div14 = document.querySelector('div[id="14"]');
+    div14.innerHTML = main14()
+    console.log(div14.innerHTML)
+    // 4
+    printLine()
+
+
     // Day 13: Abstract Classes
 
     class Book {
