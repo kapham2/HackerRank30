@@ -1,5 +1,83 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+    // Day 15: Linked List
+    
+    class Node {    
+        constructor(data) {
+            this.data = data
+            this.next = null
+        }
+
+        getData() {
+            return this.data
+        }
+
+        getNext() {
+            return this.next
+        }
+
+        setNext(node) {
+            this.next = node
+        }
+    }
+
+    class Solution {
+        insert(head,value) {
+            let headNode 
+
+            if (head == null) {
+                headNode = new Node(value)
+            }
+            else {
+                const newNode = new Node(value)
+                headNode = head
+                let current = head
+        
+                while (current.getNext() != null) {
+                    current = current.getNext()
+                }
+        
+                current.next = newNode
+            }
+      
+            return headNode
+        }
+        
+        display(head) {
+            let current = head
+            let string = ""
+            while (current) {
+                string += current.getData() + " "
+                current = current.getNext()
+            }
+            console.log(string)
+        }
+    }
+
+    function main15() {
+        const mylist = new Solution()
+        let head = null
+        const T = 4
+        const allData = [2, 3, 4, 1]
+        let data
+
+        for (i = 0; i < T; i++) {
+            data = allData[i]
+            head = mylist.insert(head, data)
+        }
+
+        mylist.display(head)
+
+        return "Day 15: Linked List"
+    }
+
+    div15 = document.querySelector('div[id="15"]');
+    div15.innerHTML = main15()
+    console.log(div15.innerHTML)
+    // 2 3 4 1
+    printLine()
+
+
     // Day 14: Scope 
 
     class Difference {  
