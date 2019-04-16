@@ -1,5 +1,28 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+    // Day 16: Exceptions - String to Integer
+
+    function main16() {
+        const S = "za";
+    
+        try {
+            const N = parseInt(S) || "Bad String"
+            throw N
+        }
+        catch (err) {
+            console.log(err)
+        }
+
+        return "Day 16: Exceptions - String to Integer"
+    }
+
+    div16 = document.querySelector('div[id="16"]');
+    div16.innerHTML = main16()
+    console.log(div16.innerHTML)
+    // Bad String
+    printLine()
+
+
     // Day 15: Linked List
     
     class Node {    
